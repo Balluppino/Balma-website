@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="BALMA - Location Esclusiva">
+    <title>BALMA - Location Esclusiva</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    
+    <!-- ========================================
+         1. LOADING PAGE
+         White screen with centered logo, transitions on first interaction
+         ======================================== -->
+    <div id="loadingPage" class="loading-page active">
+        <img src="Logo.jpg" alt="BALMA Logo" class="loading-logo">
+    </div>
+
+    <!-- ========================================
+         2. NAVIGATION BAR
+         Fixed navbar with responsive hamburger menu for mobile
+         ======================================== -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <!-- Left navigation items -->
+            <div class="nav-left">
+                <a href="#gallery" class="nav-link" data-en="GALLERY" data-it="GALLERY">GALLERY</a>
+                <a href="#storia" class="nav-link" data-en="HISTORY" data-it="STORIA">STORIA</a>
+                <a href="#eventi" class="nav-link" data-en="EVENTS" data-it="EVENTI">EVENTI</a>
+            </div>
+
+            <!-- Center logo/brand -->
+            <a href="#hero" class="nav-brand">BALMA</a>
+
+            <!-- Right navigation items -->
+            <div class="nav-right">
+                <a href="#dove-siamo" class="nav-link" data-en="WHERE WE ARE" data-it="DOVE SIAMO">DOVE SIAMO</a>
+                <a href="#contact" class="nav-link" data-en="CONTACT" data-it="CONTATTI">CONTATTI</a>
+            </div>
+
+            <!-- Language toggle -->
+            <div class="language-toggle">
+                <button class="lang-btn active" data-lang="it">IT</button>
+                <span class="lang-separator">/</span>
+                <button class="lang-btn" data-lang="en">ENG</button>
+            </div>
+
+            <!-- Mobile hamburger menu -->
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+
+        <!-- Mobile menu overlay -->
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="#gallery" class="mobile-link" data-en="GALLERY" data-it="GALLERY">GALLERY</a>
+            <a href="#storia" class="mobile-link" data-en="HISTORY" data-it="STORIA">STORIA</a>
+            <a href="#eventi" class="mobile-link" data-en="EVENTS" data-it="EVENTI">EVENTI</a>
+            <a href="#dove-siamo" class="mobile-link" data-en="WHERE WE ARE" data-it="DOVE SIAMO">DOVE SIAMO</a>
+            <a href="#contact" class="mobile-link" data-en="CONTACT" data-it="CONTATTI">CONTATTI</a>
+        </div>
+    </nav>
+
+    <!-- ========================================
+         3. HERO SECTION
+         Full-screen hero with background image and CTAs
+         ======================================== -->
+    <section id="hero" class="hero">
+        <div class="hero-image" style="background-image: url('Foto Professionale Clean.jpeg')"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title" data-en="Where History Meets Elegance" data-it="Dove Storia ed Eleganza si incontrano">
+                Dove Storia ed Eleganza si incontrano
+            </h1>
+            <div class="hero-ctas">
+                <a href="#contact" class="cta-primary" data-en="Request a Quote" data-it="Richiedi un Preventivo">Richiedi un Preventivo</a>
+                <a href="#gallery" class="cta-secondary" data-en="View Gallery" data-it="Vedi la Gallery">Vedi la Gallery</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         4. MISSION SECTION
+         White background with refined typography explaining BALMA's philosophy
+         Italian translation: "balma" = riparo alpino, cavità rocciosa
+         ======================================== -->
+    <section class="mission-section">
+        <div class="mission-container">
+            <h2 class="mission-slogan" data-en="A Shelter of Beauty" data-it="Un Rifugio di Bellezza">
+                Un Rifugio di Bellezza
+            </h2>
+            <p class="mission-text" data-en="In the Alpine tradition, a ''balma'' is a sacred shelter, a cave where rock becomes a roof, offering protection and refuge. Our venue honors this essence: a sanctuary of elegance where history protects your most precious moments. Here, every event is cradled in beauty, exclusivity, and timeless grace." data-it="Nella tradizione alpina, una ''balma'' è un rifugio sacro, una cavità dove la roccia diventa tetto, offrendo protezione e riparo. La nostra location onora questa essenza: un santuario di eleganza dove la storia protegge i vostri momenti più preziosi. Qui, ogni evento è custodito nella bellezza, nell'esclusività e nella grazia senza tempo.">
+                Nella tradizione alpina, una "balma" è un rifugio sacro, una cavità dove la roccia diventa tetto, offrendo protezione e riparo. La nostra location onora questa essenza: un santuario di eleganza dove la storia protegge i vostri momenti più preziosi. Qui, ogni evento è custodito nella bellezza, nell'esclusività e nella grazia senza tempo.
+            </p>
+            <p class="mission-tagline" data-en="Let's Create Memories Together." data-it="Creiamo dei ricordi insieme.">
+                Creiamo dei ricordi insieme.
+            </p>
+        </div>
+    </section>
+
+    <!-- ========================================
+         5. SET UP SECTION
+         Technical details and interactive layout switcher
+         Inspired by sevgroup.it layout presentation
+         ======================================== -->
+    <section id="setup" class="setup-section">
+        <div class="setup-container">
+            <div class="setup-intro">
+                <h2 class="section-title" data-en="Seating Arrangements" data-it="Allestimenti">Allestimenti</h2>
+            </div>
+
+            <!-- Interactive layout tabs -->
+            <div class="layout-section">
+                <div class="layout-tabs">
+                    <button class="layout-tab active" data-layout="gala" data-en="Gala Dinner Style" data-it="Stile Cena di Gala">Stile Cena di Gala</button>
+                    <button class="layout-tab" data-layout="theater" data-en="Theater Style" data-it="Stile Teatro">Stile Teatro</button>
+                    <button class="layout-tab" data-layout="cocktail" data-en="Cocktail Style" data-it="Stile Cocktail">Stile Cocktail</button>
+                </div>
+
+                <!-- Layout images - Replace these placeholder paths with actual floor plan images -->
+                <div class="layout-displays">
+                    <div class="layout-display active" data-layout="gala">
+                        <img src="Allestimenti/Cena di Gala.png" alt="Gala Dinner seating arrangement" class="layout-image">
+                        <p class="layout-caption" data-en="Up to 48 guests seated" data-it="Fino a 48 ospiti seduti">Fino a 48 ospiti seduti</p>
+                    </div>
+                    <div class="layout-display" data-layout="theater">
+                        <img src="Allestimenti/Teatro.png" alt="Theater seating arrangement" class="layout-image">
+                        <p class="layout-caption" data-en="Up to 70 guests seated + speaker table" data-it="Fino a 70 ospiti seduti + tavolo relatori">Fino a 70 ospiti seduti + tavolo relatori</p>
+                    </div>
+                    <div class="layout-display" data-layout="cocktail">
+                        <img src="Allestimenti/Cocktail.png" alt="Cocktail standing arrangement" class="layout-image">
+                        <p class="layout-caption" data-en="Up to 70 guests standing + buffet tables" data-it="Fino a 70 ospiti in piedi + tavoli buffet">Fino a 70 ospiti in piedi + tavoli buffet</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats section moved below -->
+            <div class="setup-stats">
+                <div class="stat-item">
+                    <span class="stat-number">250 m²</span>
+                    <span class="stat-label" data-en="Indoor Space" data-it="Spazio Interno">Spazio Interno</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">80 m²</span>
+                    <span class="stat-label" data-en="Garden" data-it="Giardino">Giardino</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">70</span>
+                    <span class="stat-label" data-en="Max Capacity" data-it="Capacità Massima">Capacità Massima</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         6. GALLERY SECTION
+         Most important visual section - elegant grid with lightbox
+         ======================================== -->
+    <section id="gallery" class="gallery-section">
+        <div class="gallery-container">
+            <h2 class="section-title gallery-title">Gallery</h2>
+            <div class="gallery-grid">
+                <!-- Gallery items - Add more as needed -->
+                <div class="gallery-item" data-index="0">
+                    <img src="Gallery/1.jpeg" alt="BALMA interior view 1" loading="lazy" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <span class="gallery-zoom">+</span>
+                    </div>
+                </div>
+                <div class="gallery-item" data-index="1">
+                    <img src="Gallery/2.jpeg" alt="BALMA interior view 2" loading="lazy" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <span class="gallery-zoom">+</span>
+                    </div>
+                </div>
+                <div class="gallery-item" data-index="2">
+                    <img src="Gallery/3.jpeg" alt="BALMA interior view 3" loading="lazy" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <span class="gallery-zoom">+</span>
+                    </div>
+                </div>
+                <div class="gallery-item" data-index="3">
+                    <img src="Gallery/4.jpeg" alt="BALMA exterior view" loading="lazy" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <span class="gallery-zoom">+</span>
+                    </div>
+                </div>
+                <div class="gallery-item" data-index="4">
+                    <img src="Gallery/5.jpeg" alt="BALMA architectural detail" loading="lazy" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <span class="gallery-zoom">+</span>
+                    </div>
+                </div>
+                <div class="gallery-item" data-index="5">
+                    <img src="Gallery/12.jpeg" alt="BALMA stained glass windows" loading="lazy" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <span class="gallery-zoom">+</span>
+                    </div>
+                </div>
+                <div class="gallery-item" data-index="6">
+                    <img src="Gallery/13.jpeg" alt="BALMA garden area" loading="lazy" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <span class="gallery-zoom">+</span>
+                    </div>
+                </div>
+                <div class="gallery-item" data-index="7">
+                    <img src="Gallery/14.jpeg" alt="BALMA event setup" loading="lazy" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <span class="gallery-zoom">+</span>
+                    </div>
+                </div>
+                <div class="gallery-item" data-index="8">
+                    <img src="Gallery/15.jpeg" alt="BALMA event setup" loading="lazy" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <span class="gallery-zoom">+</span>
+                    </div>
+                </div>
+                <div class="gallery-item" data-index="9">
+                    <img src="Gallery/16.jpeg" alt="BALMA event setup" loading="lazy" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <span class="gallery-zoom">+</span>
+                    </div>
+                </div>
+                <div class="gallery-item" data-index="10">
+                    <img src="Gallery/21.jpeg" alt="BALMA event setup" loading="lazy" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <span class="gallery-zoom">+</span>
+                    </div>
+                </div>
+                <div class="gallery-item" data-index="11">
+                    <img src="Gallery/22.jpeg" alt="BALMA event setup" loading="lazy" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <span class="gallery-zoom">+</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Lightbox for enlarged images -->
+        <div class="lightbox" id="lightbox">
+            <button class="lightbox-close" aria-label="Close lightbox">&times;</button>
+            <button class="lightbox-prev" aria-label="Previous image">&#8249;</button>
+            <button class="lightbox-next" aria-label="Next image">&#8250;</button>
+            <img src="" alt="" class="lightbox-img" id="lightboxImg">
+            <div class="lightbox-counter" id="lightboxCounter"></div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         7. STORIA SECTION (History)
+         Two alternating sections with text and images
+         ======================================== -->
+    <section id="storia" class="storia-section">
+        <h2 class="section-title" data-en="Our Story" data-it="La Nostra Storia">La Nostra Storia</h2>
+        
+        <!-- First section: Image left, Text right -->
+        <div class="storia-row">
+            <div class="storia-image-left">
+                <img src="Foto Storica 2.jpeg" alt="Historical photo of the church" class="storia-photo">
+            </div>
+            <div class="storia-content-right">
+                <div class="storia-text">
+                    <p data-en="On the hills of Cantù, amidst ancient silences and memories carved in stone, stands a building that for centuries has preserved stories of devotion and rebirth." data-it="Sulle colline di Cantù, tra silenzi antichi e memorie di pietra, sorge un edificio che da secoli custodisce storie di devozione e di rinascita.">
+                        Sulle colline di Cantù, tra silenzi antichi e memorie di pietra, sorge un edificio che da secoli custodisce 
+                        storie di devozione e di rinascita.
+                    </p>
+                    <p data-en="The church dedicated to San Carlo Borromeo, built between the 17th and 18th centuries, began as a small place of prayer for the local community, a spiritual refuge and a symbol of deep Lombard faith." data-it="La chiesa dedicata a San Carlo Borromeo, edificata tra il XVII e il XVIII secolo, nacque come piccolo luogo di preghiera per la comunità locale, rifugio spirituale e simbolo della profonda fede lombarda.">
+                        La chiesa dedicata a San Carlo Borromeo, edificata tra il XVII e il XVIII secolo, 
+                        nacque come piccolo luogo di preghiera per la comunità locale, rifugio spirituale e simbolo della profonda fede lombarda. 
+                    </p>
+                    <p data-en="After being deconsecrated, the building continued for many years to live as an oratory, welcoming meetings and moments of shared life, until, in the 1980s, its doors closed and time slowly marked its contours." data-it="Dopo essere stato sconsacrato, l’edificio continuò per molti anni a vivere come oratorio, accogliendo incontri e momenti di vita condivisa, fino a quando, negli anni Ottanta, le sue porte si chiusero e il tempo ne segnò lentamente i contorni.">
+                        Dopo essere stato sconsacrato, l’edificio continuò per molti anni a vivere come oratorio, accogliendo incontri e momenti di vita condivisa, fino a quando, negli anni Ottanta, le sue porte si chiusero e il tempo ne segnò lentamente i contorni.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Second section: Text left, Image right -->
+        <div class="storia-row storia-row-reverse">
+            <div class="storia-content-left">
+                <div class="storia-text">
+                    <p data-en="In 2023, a new chapter began: a meticulous restoration returned the church to its original splendor, blending the historical soul of the architecture with contemporary elegance. Each detail was honored, each surface restored with reverence." data-it="Nel 2023 è iniziato un nuovo capitolo: un accurato restauro ha restituito alla chiesa il suo splendore originario, fondendo l’anima storica dell’architettura con un’eleganza contemporanea. Ogni dettaglio è stato onorato, ogni superficie restaurata con riverenza.">
+                        Nel 2023 è iniziato un nuovo capitolo: un accurato restauro ha restituito alla chiesa il suo splendore originario, fondendo l’anima storica dell’architettura con un’eleganza contemporanea. Ogni dettaglio è stato onorato, ogni superficie restaurata con riverenza.
+                    </p>
+                    <p data-en="Today, this place has been rediscovered as a space of beauty and harmony, where the past dialogues with the present." data-it="Oggi, questo luogo ritrovato è uno spazio di bellezza e armonia, dove il passato dialoga con il presente e ogni dettaglio racconta la cura, la passione e il rispetto con cui è stato riportato alla vita.">
+                        Oggi, questo luogo ritrovato è uno spazio di bellezza e armonia, dove il passato dialoga con il presente e 
+                        ogni dettaglio racconta la cura, la passione e il rispetto con cui è stato riportato alla vita. 
+                    </p>
+                    <p data-en="Today, BALMA stands as a bridge between eras, a testament to architectural heritage reimagined for modern celebration." data-it="Oggi, BALMA rappresenta un ponte tra le epoche, una testimonianza del patrimonio architettonico di un tempo reimmaginato per celebrazioni moderne.">
+                        Oggi, BALMA rappresenta un ponte tra le epoche, una testimonianza del patrimonio architettonico di un tempo reimmaginato 
+                        per celebrazioni moderne.
+                    </p>
+                </div>
+            </div>
+            <div class="storia-slider-container">
+                <button class="slider-arrow slider-arrow-left" aria-label="Previous image">&#8249;</button>
+                <button class="slider-arrow slider-arrow-right" aria-label="Next image">&#8250;</button>
+                <div class="storia-slider">
+                    <img src="Pre-Post/3.jpeg" alt="BALMA restoration 1" class="storia-slider-img active">
+                    <img src="Pre-Post/4.jpeg" alt="BALMA restoration 2" class="storia-slider-img">
+                    <img src="Pre-Post/1.jpeg" alt="BALMA restoration 3" class="storia-slider-img">
+                    <img src="Pre-Post/2.jpeg" alt="BALMA restoration 4" class="storia-slider-img">
+                    <img src="Pre-Post/5.jpeg" alt="BALMA restoration 5" class="storia-slider-img">
+                    <img src="Pre-Post/6.jpeg" alt="BALMA restoration 6" class="storia-slider-img">
+                </div>
+                <div class="slider-dots">
+                    <button class="slider-dot active" data-slide="0" aria-label="Go to image 1"></button>
+                    <button class="slider-dot" data-slide="1" aria-label="Go to image 2"></button>
+                    <button class="slider-dot" data-slide="2" aria-label="Go to image 3"></button>
+                    <button class="slider-dot" data-slide="3" aria-label="Go to image 4"></button>
+                    <button class="slider-dot" data-slide="4" aria-label="Go to image 5"></button>
+                    <button class="slider-dot" data-slide="5" aria-label="Go to image 6"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         8. EVENTI SECTION
+         Polaroid-style grid of event photos
+         ======================================== -->
+    <section id="eventi" class="eventi-section">
+        <div class="eventi-container">
+            <h2 class="section-title" data-en="Events Gallery" data-it="Eventi">Eventi</h2>
+            <div class="polaroid-grid">
+                <!-- Event photos in polaroid style - Add up to 25 -->
+                <div class="polaroid">
+                    <img src="Eventi/1.JPG" alt="Event at BALMA" loading="lazy">
+                </div>
+                <div class="polaroid">
+                    <img src="Eventi/2.jpeg" alt="Event at BALMA" loading="lazy">
+                </div>
+                <div class="polaroid">
+                    <img src="Eventi/3.jpeg" alt="Event at BALMA" loading="lazy">
+                </div>
+                <div class="polaroid">
+                    <img src="Eventi/10.jpeg" alt="Event at BALMA" loading="lazy">
+                </div>
+                <div class="polaroid">
+                    <img src="Eventi/8.jpeg" alt="Event at BALMA" loading="lazy">
+                </div>
+                <div class="polaroid">
+                    <img src="Eventi/4.jpeg" alt="Event at BALMA" loading="lazy">
+                </div>
+                <div class="polaroid">
+                    <img src="Eventi/5.jpeg" alt="Event at BALMA" loading="lazy">
+                </div>
+                <div class="polaroid">
+                    <img src="Eventi/6.jpeg" alt="Event at BALMA" loading="lazy">
+                </div>
+                <div class="polaroid">
+                    <img src="Eventi/7.jpeg" alt="Event at BALMA" loading="lazy">
+                </div>
+                <div class="polaroid">
+                    <img src="Eventi/9.jpeg" alt="Event at BALMA" loading="lazy">
+                </div>
+                <div class="polaroid">
+                    <img src="Eventi/11.jpeg" alt="Event at BALMA" loading="lazy">
+                </div>
+                <div class="polaroid">
+                    <img src="Eventi/12.jpeg" alt="Event at BALMA" loading="lazy">
+                </div>
+                <div class="polaroid">
+                    <img src="Eventi/13.jpeg" alt="Event at BALMA" loading="lazy">
+                </div>
+                <div class="polaroid">
+                    <img src="Eventi/14.jpeg" alt="Event at BALMA" loading="lazy">
+                </div>
+                <div class="polaroid">
+                    <img src="Eventi/15.jpeg" alt="Event at BALMA" loading="lazy">
+                </div>
+                <div class="polaroid">
+                    <img src="Eventi/16.jpeg" alt="Event at BALMA" loading="lazy">
+                </div>
+                <div class="polaroid">
+                    <img src="Eventi/17.jpeg" alt="Event at BALMA" loading="lazy">
+                </div>
+                <div class="polaroid">
+                    <img src="Eventi/18.jpeg" alt="Event at BALMA" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         9. SERVICES SECTION
+         White background with included amenities/services
+         ======================================== -->
+    <section class="services-section">
+        <div class="services-container">
+            <h2 class="section-title" data-en="What's Included" data-it="Servizi Inclusi">Servizi Inclusi</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3 class="service-name" data-en="Fully Equipped Professional Kitchen" data-it="Cucina Professionale Attrezzata">Cucina Professionale Attrezzata</h3>
+                </div>
+                <div class="service-card">
+                    <h3 class="service-name" data-en="TV with 100″ Display" data-it="TV con Display da 100″">TV con Display da 100″</h3>
+                </div>
+                <div class="service-card">
+                    <h3 class="service-name" data-en="80m² Private Garden" data-it="Giardino Privato di 80m²">Giardino Privato di 80m²</h3>
+                </div>
+                <div class="service-card">
+                    <h3 class="service-name" data-en="Wi-Fi" data-it="Wi-Fi">Wi-Fi</h3>
+                </div>
+                <div class="service-card">
+                    <h3 class="service-name" data-en="Customizable Display Cases" data-it="Vetrine Espositive Personalizzabili">Vetrine Espositive Personalizzabili</h3>
+                </div>
+                <div class="service-card">
+                    <h3 class="service-name" data-en="Cleaning Services" data-it="Servizi di Pulizia">Servizi di Pulizia</h3>
+                </div>
+                <div class="service-card">
+                    <h3 class="service-name" data-en="Bespoke Floral Arrangements" data-it="Composizioni Floreali">Composizioni Floreali</h3>
+                    <p class="service-desc" data-en="Available upon request" data-it="Su richiesta">Su richiesta</p>
+                </div>
+                <div class="service-card">
+                    <h3 class="service-name" data-en="Photographer & Videomaker" data-it="Fotografo e Videomaker">Fotografo e Videomaker</h3>
+                    <p class="service-desc" data-en="Available upon request" data-it="Su richiesta">Su richiesta</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         10. CREATIVE PROCESS SECTION
+         Four-step event planning process
+         ======================================== -->
+    <section class="process-section">
+        <div class="process-container">
+            <h2 class="section-title" data-en="How We Love to Work" data-it="Come Amiamo Lavorare">Come Amiamo Lavorare</h2>
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h3 class="step-title" data-en="Book" data-it="Prenota">Prenota</h3>
+                    <p class="step-desc" data-en="Fill out our form and receive a detailed quote within a few hours. Clear budget, no hidden costs." data-it="Compila il nostro modulo e ricevi un preventivo dettagliato entro poche ore. Budget chiaro, nessun costo nascosto.">
+                        Compila il nostro modulo e ricevi un preventivo dettagliato entro poche ore. Budget chiaro, nessun costo nascosto.
+                    </p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h3 class="step-title" data-en="Visit" data-it="Visita">Visita</h3>
+                    <p class="step-desc" data-en="Schedule an on-site inspection or a consultation call. Experience the venue firsthand and discuss your vision in detail." data-it="Pianifica un sopralluogo o una chiamata di consulenza. Vivi la location di persona e discuti la tua visione nel dettaglio.">
+                        Pianifica un sopralluogo o una chiamata di consulenza. Vivi la location di persona e discuti la tua visione nel dettaglio.
+                    </p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h3 class="step-title" data-en="Customise" data-it="Personalizza">Personalizza</h3>
+                    <p class="step-desc" data-en="We tailor every detail to your needs. Your event, your way." data-it="Personalizziamo ogni dettaglio secondo le tue esigenze. Il tuo evento, a modo tuo.">
+                        Personalizziamo ogni dettaglio secondo le tue esigenze. Il tuo evento, a modo tuo.
+                    </p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <h3 class="step-title" data-en="Live" data-it="Vivi">Vivi</h3>
+                    <p class="step-desc" data-en="Relax and enjoy your event." data-it="Rilassati e goditi il tuo evento.">
+                        Rilassati e goditi il tuo evento.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         11. DOVE SIAMO SECTION
+         Two-column layout: map on left, location info on right
+         ======================================== -->
+    <section id="dove-siamo" class="dove-siamo-section">
+        <div class="dove-siamo-container">
+            <h2 class="section-title" data-en="Where We Are" data-it="Dove Siamo">Dove Siamo</h2>
+            <div class="location-content">
+                <div class="location-map">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11137.894959899726!2d9.123456!3d45.7383!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47869b0c7e7e7e7d%3A0x7e7e7e7e7e7e7e7e!2sCant%C3%B9%2C%20CO!5e0!3m2!1sit!2sit!4v1234567890"
+                        width="100%" 
+                        height="500" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"
+                        class="map-iframe">
+                    </iframe>
+                </div>
+                <div class="location-info">
+                    <p class="location-text" data-en="BALMA is located in the center of Cantù, an elegant town rich in history and artisan tradition, nestled in the heart of Brianza." data-it="BALMA si trova nel centro storico di Cantù, elegante città ricca di storia e tradizione artigianale, immersa nel cuore della Brianza.">
+                        BALMA si trova nel centro storico di Cantù, elegante città ricca di storia e tradizione artigianale, immersa nel cuore della Brianza.
+                    </p>
+                    <div class="location-distances">
+                        <div class="distance-item">
+                            <span class="distance-number" data-en="15 mins" data-it="15 min">15 min</span>
+                            <span class="distance-label" data-en="Como & Lake Como" data-it="Como e Lago di Como">Como e Lago di Como</span>
+                        </div>
+                        <div class="distance-item">
+                            <span class="distance-number" data-en="25 mins" data-it="25 min">25 min</span>
+                            <span class="distance-label" data-en="Lecco & Lake Lecco" data-it="Lecco e Lago di Lecco">Lecco e Lago di Lecco</span>
+                        </div>
+                        <div class="distance-item">
+                            <span class="distance-number" data-en="40 mins" data-it="40 min">40 min</span>
+                            <span class="distance-label" data-en="Milan City Center" data-it="Milano Centro">Milano Centro</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         12. CONTACT SECTION
+         Validated contact form for quote requests
+         Form validation handled in script.js
+         ======================================== -->
+    <section id="contact" class="contact-section">
+        <div class="contact-container">
+            <h2 class="section-title" data-en="Get in Touch" data-it="Contattaci">Contattaci</h2>
+            <p class="contact-intro" data-en="Request a quote and our team will respond within 48 hours." data-it="Richiedi un preventivo e il nostro team risponderà entro 48 ore.">
+                Richiedi un preventivo e il nostro team risponderà entro 48 ore.
+            </p>
+
+            <form class="contact-form" id="contactForm" action="https://formsubmit.co/305b5942216f80c97a0fe49b2b18603b" method="POST">
+                <!-- FormSubmit Configuration -->
+                <input type="hidden" name="_subject" value="Nuovo Preventivo BALMA">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name" data-en="Full Name *" data-it="Nome Completo *">Nome Completo *</label>
+                        <input type="text" id="name" name="name" required aria-required="true">
+                        <span class="error-message" data-en="Please enter your name" data-it="Inserisci il tuo nome">Inserisci il tuo nome</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="company" data-en="Company (Optional)" data-it="Azienda (Facoltativo)">Azienda (Facoltativo)</label>
+                        <input type="text" id="company" name="company">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email" data-en="Email *" data-it="Email *">Email *</label>
+                        <input type="email" id="email" name="email" required aria-required="true">
+                        <span class="error-message" data-en="Please enter a valid email" data-it="Inserisci un'email valida">Inserisci un'email valida</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone" data-en="Phone *" data-it="Telefono *">Telefono *</label>
+                        <input type="tel" id="phone" name="phone" required aria-required="true">
+                        <span class="error-message" data-en="Please enter your phone number" data-it="Inserisci il tuo numero di telefono">Inserisci il tuo numero di telefono</span>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="eventDate" data-en="Event Date *" data-it="Data Evento *">Data Evento *</label>
+                        <input type="date" id="eventDate" name="eventDate" required aria-required="true">
+                        <span class="error-message" data-en="Please select an event date" data-it="Seleziona una data per l'evento">Seleziona una data per l'evento</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="guests" data-en="Estimated Guests *" data-it="Ospiti Stimati *">Ospiti Stimati *</label>
+                        <input type="number" id="guests" name="guests" min="1" required aria-required="true">
+                        <span class="error-message" data-en="Please enter number of guests" data-it="Inserisci il numero di ospiti">Inserisci il numero di ospiti</span>
+                    </div>
+                </div>
+
+                <div class="form-group full-width">
+                    <label for="message" data-en="Tell us about your event *" data-it="Parlaci del tuo evento *">Parlaci del tuo evento *</label>
+                    <textarea id="message" name="message" rows="5" required aria-required="true"></textarea>
+                    <span class="error-message" data-en="Please describe your event" data-it="Descrivi il tuo evento">Descrivi il tuo evento</span>
+                </div>
+
+                <button type="submit" class="submit-btn" data-en="Request Quote" data-it="Richiedi Preventivo">Richiedi Preventivo</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Thank You Popup -->
+    <div class="thank-you-popup" id="thankYouPopup">
+        <div class="popup-content">
+            <button class="popup-close" id="popupClose" aria-label="Close">&times;</button>
+            <h2 class="popup-title" data-en="Thank You!" data-it="Grazie!">Grazie!</h2>
+            <p class="popup-message" data-en="We have received your request. Our team will contact you within 48 hours." data-it="Abbiamo ricevuto la tua richiesta. Il nostro team ti contatterà entro 48 ore.">
+                Abbiamo ricevuto la tua richiesta. Il nostro team ti contatterà entro 48 ore.
+            </p>
+        </div>
+    </div>
+
+    <!-- Reviews Banner -->
+    <div class="reviews-banner" id="reviewsBanner">
+        <button class="review-close" id="reviewClose" aria-label="Close">&times;</button>
+        <div class="review-item">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text" data-en="Elegant venue, impeccable service. Our daughter's baptism was perfect. Thank you for everything!" data-it="Location elegante, servizio impeccabile. Il battesimo di nostra figlia è stato perfetto. Grazie di tutto!">
+                Location elegante, servizio impeccabile. Il battesimo di nostra figlia è stato perfetto. Grazie di tutto!
+            </p>
+            <p class="review-author" data-en="Gaia A." data-it="Gaia A.">Gaia A.</p>
+        </div>
+        <div class="review-item">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text" data-en="A magical atmosphere and breathtaking spaces. I have celebrated my 60th birthday here. Highly recommended!" data-it="Un'atmosfera magica e spazi mozzafiato. Ho festeggiato qui i 60. Consigliatissimo!">
+                Un'atmosfera magica e spazi mozzafiato. Ho festeggiato qui i 60. Consigliatissimo!
+            </p>
+            <p class="review-author" data-en="Carlo M." data-it="Carlo M.">Carlo M.</p>
+        </div>
+        <div class="review-item">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text" data-en="History and modernity blend in a unique space. The perfect setting for my 50th birthday." data-it="Storia e modernità si fondono in uno spazio unico. La cornice perfetta per i miei 50 anni.">
+                Storia e modernità si fondono in uno spazio unico. La cornice perfetta per i miei 50 anni.
+            </p>
+            <p class="review-author" data-en="Gian Matteo D." data-it="Gian Matteo D.">Gian Matteo D.</p>
+        </div>
+    </div>
+
+    <!-- ========================================
+         12. LEGAL INFO SECTION
+         Credits, legal data, and contact details
+         ======================================== -->
+    <section class="legal-section">
+        <div class="legal-container">
+            <div class="legal-block">
+                <h3 class="legal-title" data-en="Legal Information" data-it="Informazioni Legali">Informazioni Legali</h3>
+                <p class="legal-text">
+                    BALMA SRL<br>
+                    <span data-en="Tax domicile: Via XXXIV Maggio 6, 22063, Cantù (CO)" data-it="Domicilio fiscale: Via XXXIV Maggio 6, 22063, Cantù (CO)">Domicilio fiscale: Via XXXIV Maggio 6, 22063, Cantù (CO)</span><br>
+                    P.IVA: 04163560131<br>
+                    Codice SDI: M5UXCR1<br>
+                </p>
+            </div>
+
+            <div class="legal-block">
+                <h3 class="legal-title" data-en="Contact Information" data-it="Informazioni di Contatto">Informazioni di Contatto</h3>
+                <p class="legal-text">
+                    Email: balma.eventi@gmail.com<br>
+                    <span data-en="Phone: +39 338 787 9442" data-it="Telefono: +39 338 787 9442">Telefono: +39 338 787 9442</span>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         13. FOOTER
+         Minimal elegant footer
+         ======================================== -->
+    <footer class="footer">
+        <div class="footer-container">
+            <p class="footer-copyright">© 2025 BALMA SRL. <span data-en="All rights reserved." data-it="Tutti i diritti riservati.">Tutti i diritti riservati.</span></p>
+        </div>
+    </footer>
+
+    <!-- Lucide Icons -->
+    <script src="lucide.js"></script> 
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
