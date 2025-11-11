@@ -478,10 +478,10 @@ contactForm.addEventListener('submit', async (e) => {
 function showThankYouPopup() {
     thankYouPopup.classList.add('active');
     
-    // Auto-close after 3 seconds
+    // Auto-close after 5 seconds
     setTimeout(() => {
         closeThankYouPopup();
-    }, 3000);
+    }, 5000);
 }
 
 function closeThankYouPopup() {
