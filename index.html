@@ -10,7 +10,7 @@
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="BALMA - Location Esclusiva per Eventi a Cantù">
     <meta property="og:description" content="Location elegante per feste private e eventi aziendali vicino al Lago di Como.">
-    <meta property="og:image" content="https://www.balmaeventi.com/Foto Professionale Clean.jpeg">
+    <meta property="og:image" content="https://www.balmaeventi.com/Foto_Professionale_Clean.jpeg">
     <meta property="og:url" content="https://www.balmaeventi.com">
     <meta property="og:type" content="website">
     
@@ -18,7 +18,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="BALMA - Location Esclusiva per Eventi a Cantù">
     <meta name="twitter:description" content="Location elegante per feste private e eventi aziendali vicino al Lago di Como.">
-    <meta name="twitter:image" content="https://www.balmaeventi.com/Foto Professionale Clean.jpeg">
+    <meta name="twitter:image" content="https://www.balmaeventi.com/Foto_Professionale_Clean.jpeg">
     
     <link rel="stylesheet" href="style.css">
     
@@ -99,7 +99,7 @@
          Full-screen hero with background image and CTAs
          ======================================== -->
     <section id="hero" class="hero">
-        <div class="hero-image" style="background-image: url('Foto Professionale Clean.jpeg')"></div>
+        <div class="hero-image" style="background-image: url('Foto_Professionale_Clean.jpeg')"></div>
         <div class="hero-overlay"></div>
         <div class="hero-content">
             <h1 class="hero-title" data-en="Where History Meets Elegance" data-it="Dove Storia ed Eleganza si incontrano">
@@ -285,7 +285,7 @@
         <!-- First section: Image left, Text right -->
         <div class="storia-row">
             <div class="storia-image-left">
-                <img src="Foto Storica 2.jpeg" alt="Foto storica della chiesa" class="storia-photo">
+                <img src="Foto_Storica_2.jpeg" alt="Foto storica della chiesa" class="storia-photo">
             </div>
             <div class="storia-content-right">
                 <div class="storia-text">
@@ -680,21 +680,27 @@
     <!-- Schema.org Structured Data -->
     <script type="application/ld+json">
     {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "BALMA SRL",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Via XXXIV Maggio 6",
-        "addressLocality": "Cantù",
-        "postalCode": "22063",
-        "addressCountry": "IT"
-      },
-      "telephone": "+39 338 787 9442",
-      "email": "balma.eventi@gmail.com",
-      "url": "https://www.balmaeventi.com",
-      "description": "Location esclusiva per eventi, matrimoni e feste private a Cantù, Brianza.",
-      "image": "https://www.balmaeventi.com/favicon_io/favicon-32x32.png"
+        "@context": "https://schema.org",
+        "@type": "EventVenue",
+        "name": "BALMA SRL",
+        "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "Via XXXIV Maggio 6",
+                    "addressLocality": "Cantù",
+                    "postalCode": "22063",
+                    "addressCountry": "IT"
+                    },
+        "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": "45.7381",
+                "longitude": "9.1301"
+                },
+        "telephone": "+39 338 787 9442",
+        "email": "balma.eventi@gmail.com",
+        "url": "https://www.balmaeventi.com",
+        "description": "BALMA - Location Esclusiva per Eventi a Cantù. Location elegante per feste private e eventi aziendali vicino al Lago di Como.",
+        "image": "https://www.balmaeventi.com/Foto_Professionale_Clean.jpeg",
+        "priceRange": "€-€€€"
     }
     </script>
 
