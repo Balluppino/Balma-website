@@ -167,6 +167,14 @@ function switchLanguage(lang) {
         if (text) {
             // Handle different element types
             if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                // Handle placeholder with specific data attributes
+                const placeholderAttr = element.getAttribute(`data-${lang}-placeholder`);
+                if (placeholderAttr) {
+                    element.placeholder = placeholderAttr;
+                } else {
+                    element.placeholder = text;
+                }
+            } else if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
                 element.placeholder = text;
             } else {
                 element.textContent = text;
@@ -432,16 +440,54 @@ contactForm.addEventListener('submit', async (e) => {
         eventDate.closest('.form-group').classList.add('error');
         isValid = false;
     } else {
-        // Check if date is at least 2 days from today
-        const selectedDate = new Date(eventDate.value);
-        const today = new Date();
-        today.setHours(0, 0, 0, 0);
-        const minDate = new Date(today);
-        minDate.setDate(today.getDate() + 2);
+        // Parse date based on current language
+        let selectedDate = null;
+        const dateValue = eventDate.value.trim();
         
-        if (selectedDate < minDate) {
+        if (currentLang === 'it') {
+            // Format: dd/mm/yyyy
+            const dateRegex = /^(\d{2})\/(\d{2})\/(\d{4})$/;
+            const match = dateValue.match(dateRegex);
+            if (match) {
+                const day = parseInt(match[1], 10);
+                const month = parseInt(match[2], 10) - 1; // JS months are 0-indexed
+                const year = parseInt(match[3], 10);
+                selectedDate = new Date(year, month, day);
+                // Verify it's a valid date
+                if (selectedDate.getDate() !== day || selectedDate.getMonth() !== month || selectedDate.getFullYear() !== year) {
+                    selectedDate = null;
+                }
+            }
+        } else {
+            // Format: mm/dd/yyyy
+            const dateRegex = /^(\d{2})\/(\d{2})\/(\d{4})$/;
+            const match = dateValue.match(dateRegex);
+            if (match) {
+                const month = parseInt(match[1], 10) - 1; // JS months are 0-indexed
+                const day = parseInt(match[2], 10);
+                const year = parseInt(match[3], 10);
+                selectedDate = new Date(year, month, day);
+                // Verify it's a valid date
+                if (selectedDate.getDate() !== day || selectedDate.getMonth() !== month || selectedDate.getFullYear() !== year) {
+                    selectedDate = null;
+                }
+            }
+        }
+        
+        if (!selectedDate) {
             eventDate.closest('.form-group').classList.add('error');
             isValid = false;
+        } else {
+            // Check if date is at least 2 days from today
+            const today = new Date();
+            today.setHours(0, 0, 0, 0);
+            const minDate = new Date(today);
+            minDate.setDate(today.getDate() + 2);
+            
+            if (selectedDate < minDate) {
+                eventDate.closest('.form-group').classList.add('error');
+                isValid = false;
+            }
         }
     }
     
@@ -740,14 +786,34 @@ document.addEventListener('DOMContentLoaded', () => {
     // Set initial body overflow for loading page
     document.body.style.overflow = 'hidden';
     
-    // Set minimum date for event date picker (2 days from today)
+    // Date input formatting
     const eventDateInput = document.getElementById('eventDate');
     if (eventDateInput) {
-        const today = new Date();
-        const minDate = new Date(today);
-        minDate.setDate(today.getDate() + 2);
-        const minDateString = minDate.toISOString().split('T')[0];
-        eventDateInput.setAttribute('min', minDateString);
+        // Auto-format date input with slashes
+        eventDateInput.addEventListener('input', (e) => {
+            let value = e.target.value.replace(/\D/g, ''); // Remove non-digits
+            
+            if (value.length >= 2) {
+                value = value.slice(0, 2) + '/' + value.slice(2);
+            }
+            if (value.length >= 5) {
+                value = value.slice(0, 5) + '/' + value.slice(5, 9);
+            }
+            
+            e.target.value = value;
+        });
+        
+        // Update placeholder when language changes
+        const langButtons = document.querySelectorAll('.lang-btn');
+        langButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const lang = btn.getAttribute('data-lang');
+                const placeholder = eventDateInput.getAttribute(`data-${lang}-placeholder`);
+                if (placeholder) {
+                    eventDateInput.placeholder = placeholder;
+                }
+            });
+        });
     }
     
     // Add any additional initialization here
