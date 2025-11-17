@@ -177,7 +177,7 @@ function switchLanguage(lang) {
             } else if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
                 element.placeholder = text;
             } else {
-                element.textContent = text;
+                element.innerHTML = text;
             }
         }
     });

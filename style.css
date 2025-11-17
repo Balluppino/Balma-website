@@ -1703,7 +1703,9 @@ button {
     .cta-primary,
     .cta-secondary {
         width: 100%;
-        max-width: 240px;
+        max-width: 200px;
+        padding: 0.8rem 1.8rem;
+        font-size: 0.85rem;
     }
     
     .gallery-grid {
