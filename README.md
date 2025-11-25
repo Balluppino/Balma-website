@@ -11,11 +11,7 @@ Visit the live site at: **[balmaeventi.com](https://balmaeventi.com)**
 
 ## Project Description
 
-**BALMA Eventi** is a refined static website designed to showcase *BALMA SRL*,  
-an exclusive historical venue for private and corporate events in the heart of **Cantù**, near Lake Como.
-
-The website delivers an **immersive and elegant browsing experience**, blending history, design, and modern functionality.  
-It is **fully responsive**, bilingual (**Italian / English**), and optimized for SEO and social sharing.
+**BALMA Eventi** is a refined static website designed to showcase *BALMA SRL*, an exclusive historical venue for private and corporate events in the heart of **Cantù**, near Lake Como. The website delivers an **immersive and elegant browsing experience**, blending history, design, and modern functionality. It is **fully responsive**, bilingual (**Italian / English**), and optimized for SEO and social sharing.
 
 ## Site Structure
 
@@ -36,7 +32,5 @@ It is **fully responsive**, bilingual (**Italian / English**), and optimized for
 ## License
 
 © 2025 **BALMA SRL** – All Rights Reserved.  
-This project is proprietary and protected under copyright law.  
-Unauthorized copying, distribution, or modification of any files in this repository is strictly prohibited.  
-For collaboration or usage requests, please contact [balluppino11@gmail.com](mailto:balluppino11@gmail.com).
+This project is proprietary and protected under copyright law. Unauthorized copying, distribution, or modification of any files in this repository is strictly prohibited. For collaboration or usage requests, please contact [balluppino11@gmail.com](mailto:balluppino11@gmail.com).
 
