@@ -7,7 +7,7 @@
 
 ## Live Demo
 
-Visit the live site at:**[balmaeventi.com](https://balmaeventi.com)**
+Visit the live site at: **[balmaeventi.com](https://balmaeventi.com)**
 
 ## Project Description
 
