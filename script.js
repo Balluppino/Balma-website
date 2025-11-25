@@ -211,7 +211,34 @@ layoutTabs.forEach(tab => {
 });
 
 // ========================================
-// 5. GALLERY LIGHTBOX
+// 5. GALLERY EXPAND/COLLAPSE
+// Show/hide additional gallery images
+// ========================================
+
+const galleryGrid = document.querySelector('.gallery-grid');
+const galleryExpandBtn = document.getElementById('galleryExpandBtn');
+const expandText = galleryExpandBtn.querySelector('.expand-text');
+const expandIcon = galleryExpandBtn.querySelector('.expand-icon');
+
+galleryExpandBtn.addEventListener('click', () => {
+    galleryGrid.classList.toggle('expanded');
+    
+    if (galleryGrid.classList.contains('expanded')) {
+        // Gallery is expanded - hide the button
+        galleryExpandBtn.classList.add('hidden');
+        
+        // Smooth scroll to show new images
+        setTimeout(() => {
+            const firstHiddenItem = document.querySelector('.gallery-item-hidden');
+            if (firstHiddenItem) {
+                firstHiddenItem.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
+        }, 100);
+    }
+});
+
+// ========================================
+// 6. GALLERY LIGHTBOX
 // Open, close, and navigate through gallery images
 // ========================================
 

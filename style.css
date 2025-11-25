@@ -765,6 +765,27 @@ button {
     border-radius: 4px;
     cursor: pointer;
     aspect-ratio: 4/3;
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.gallery-item-hidden {
+    display: none;
+}
+
+.gallery-grid.expanded .gallery-item-hidden {
+    display: block;
+    animation: fadeInGallery 0.6s ease forwards;
+}
+
+@keyframes fadeInGallery {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .gallery-img {
@@ -800,6 +821,48 @@ button {
     font-size: 3rem;
     color: white;
     font-weight: 300;
+}
+
+/* Gallery expand button */
+.gallery-expand-container {
+    margin-top: 3rem;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.gallery-expand-btn {
+    padding: 1rem 3rem;
+    font-size: 0.95rem;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-primary);
+    background-color: transparent;
+    border: 1px solid var(--color-border);
+    border-radius: 2px;
+    cursor: pointer;
+    transition: all var(--transition-normal);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.expand-icon {
+    font-size: 1.2rem;
+    transition: transform var(--transition-normal);
+}
+
+.gallery-expand-btn:hover {
+    border-color: #B8927E;
+    color: #B8927E;
+}
+
+.gallery-expand-btn:hover .expand-icon {
+    transform: translateY(3px);
+}
+
+.gallery-expand-btn.hidden {
+    display: none;
 }
 
 /* Lightbox */
