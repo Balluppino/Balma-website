@@ -5,8 +5,6 @@
 ![JavaScript](https://img.shields.io/badge/JavaScript-yellow?style=for-the-badge&logo=javascript)
 ![License](https://img.shields.io/badge/License-©_BALMA-lightgrey?style=for-the-badge)
 
----
-
 ## Live Demo
 
 Visit the live site at:**[balmaeventi.com](https://balmaeventi.com)**
