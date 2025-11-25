@@ -9,8 +9,6 @@
 
 Visit the live site at:**[balmaeventi.com](https://balmaeventi.com)**
 
----
-
 ## Project Description
 
 **BALMA Eventi** is a refined static website designed to showcase *BALMA SRL*,  
@@ -18,8 +16,6 @@ an exclusive historical venue for private and corporate events in the heart of *
 
 The website delivers an **immersive and elegant browsing experience**, blending history, design, and modern functionality.  
 It is **fully responsive**, bilingual (**Italian / English**), and optimized for SEO and social sharing.
-
----
 
 ## Site Structure
 
@@ -36,8 +32,6 @@ It is **fully responsive**, bilingual (**Italian / English**), and optimized for
 | **Where We Are** | Interactive Google Map (iframe) and travel distances. |
 | **Contact** | Validated contact form via [Formspree.io](https://formspree.io). |
 | **Legal Info** | Company data, contact details, and credits. |
-
----
 
 ## License
 
