@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+    <!-- Homepage -->
+    <url>
+        <loc>https://balmaeventi.com/</loc>
+        <lastmod>2025-11-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <!-- Gallery Section -->
+    <url>
+        <loc>https://balmaeventi.com/#gallery</loc>
+        <lastmod>2025-11-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Storia Section -->
+    <url>
+        <loc>https://balmaeventi.com/#storia</loc>
+        <lastmod>2025-11-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Eventi Section -->
+    <url>
+        <loc>https://balmaeventi.com/#eventi</loc>
+        <lastmod>2025-11-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Servizi Section -->
+    <url>
+        <loc>https://balmaeventi.com/#servizi</loc>
+        <lastmod>2025-11-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Dove Siamo Section -->
+    <url>
+        <loc>https://balmaeventi.com/#dove-siamo</loc>
+        <lastmod>2025-11-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Contatti Section -->
+    <url>
+        <loc>https://balmaeventi.com/#contatti</loc>
+        <lastmod>2025-11-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+</urlset>

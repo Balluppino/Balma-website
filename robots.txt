@@ -1,0 +1,34 @@
+# robots.txt per BALMA Eventi
+# https://balmaeventi.com
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://balmaeventi.com/sitemap.xml
+
+# Disallow crawling di file e cartelle non pubbliche
+Disallow: /cgi-bin/
+Disallow: /tmp/
+Disallow: /*.php$
+
+# Disallow crawling di immagini non ottimizzate o temporanee
+Disallow: /*?*
+Disallow: /*.bak$
+Disallow: /*.tmp$
+
+# Allow crawling di risorse importanti
+Allow: /Gallery/
+Allow: /Allestimenti/
+Allow: /Eventi/
+Allow: /Pre-Post/
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.png$
+Allow: /*.webp$
+Allow: /*.svg$
+
+# Crawl-delay (opzionale, alcuni bot lo rispettano)
+Crawl-delay: 1
