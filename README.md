@@ -3,7 +3,6 @@
 ![HTML5](https://img.shields.io/badge/HTML5-orange?style=for-the-badge&logo=html5)
 ![CSS3](https://img.shields.io/badge/CSS3-blue?style=for-the-badge&logo=css3)
 ![JavaScript](https://img.shields.io/badge/JavaScript-yellow?style=for-the-badge&logo=javascript)
-![License](https://img.shields.io/badge/License-©_BALMA-lightgrey?style=for-the-badge)
 
 ## Live Demo
 
@@ -31,6 +30,5 @@ Visit the live site at: **[balmaeventi.com](https://balmaeventi.com)**
 
 ## License
 
-© 2025 **BALMA SRL** – All Rights Reserved.  
-This project is proprietary and protected under copyright law. Unauthorized copying, distribution, or modification of any files in this repository is strictly prohibited. For collaboration or usage requests, please contact [balluppino11@gmail.com](mailto:balluppino11@gmail.com).
+© 2025 **BALMA SRL** – All Rights Reserved. This project is proprietary and protected under copyright law. Unauthorized copying, distribution, or modification of any files in this repository is strictly prohibited. For collaboration or usage requests, please contact [balluppino11@gmail.com](mailto:balluppino11@gmail.com).
 
